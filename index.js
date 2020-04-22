@@ -66,8 +66,10 @@ startRsvpButton.addEventListener('click', ()=>{
 firebase.auth().onAuthStateChanged((user)=>{
  if(user){
    startRsvpButton.textContent = "LOGOUT"
+   guestbookContainer.style.display='block'
  }else{
    startRsvpButton.textContent = "RSVP"
+   guestbookContainer.style.display='none'
  }
 });
 
